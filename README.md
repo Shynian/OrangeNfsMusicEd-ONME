@@ -9,7 +9,6 @@ A music pack (MPF) editing tool for *Need for Speed: Carbon* and *Need for Speed
 ## Features
 
 - 🎵 **MPF Music Pack Management** — Import, export, and replace in-game MPF music packs
-- 🔊 **EALayer3 Audio Conversion** — Built-in EALayer3 codec for converting between game audio and common formats
 - 🎚️ **Event Configuration** — Manage music events and track associations
 - 🌐 **Bilingual UI** — Built-in English and Chinese translations; switch languages on the fly
 - 🖥️ **Graphical Interface** — Intuitive UI built with Qt Widgets
@@ -39,39 +38,18 @@ OrangeNfsMusicEd-ONME/
     └── manifest.xml      # Application manifest
 ```
 
-## Build Instructions
-
 ### Requirements
 
 - Qt 6.x (recommended 6.5+)
 - MSVC 2022 or MinGW
 - Python 3 (required by EALayer3 conversion scripts)
 
-### Build Steps
-
-```bash
-# Using qmake
-qmake MusicEd.pro
-nmake        # MSVC
-# or
-make         # MinGW
-```
-
-> **Note**: `resources.qrc` references helper tools under the `tools/` directory (`MPFmaster.exe`, `sx.exe`, `ffmpeg.exe`, etc.). These are third-party binaries and are **not** included in this repository. Place the required tools in `tools/` before building, or remove the corresponding entries from `resources.qrc`.
-
-### Chinese Path Issue
-
-The MSVC resource compiler (`rc.exe`) does not support non-ASCII paths. If your project path contains Chinese characters, map it to an ASCII drive letter with `subst`:
-
-```cmd
-subst X: "C:\path\to\project"
-```
 
 ## About This Repository
 
-This project was originally hosted under the GitHub organization **CARBON-Plus-Team**. In 2026, the organization was accidentally deleted. Because the account did not have a paid support plan, GitHub was unable to assist with recovering the organization or its repositories.
+This project was originally hosted under the GitHub organization **CARBON-Plus-Team**. In 2026, the organization was accidentally deleted. 
 
-Fortunately, a complete copy of the latest source code (last modified July 2026) was preserved locally, allowing the project to be re-published here. This re-upload includes only source code with educational value — no build artifacts, third-party tool binaries, or icon assets.
+Fortunately, a complete copy of the latest source code  was preserved locally, allowing the project to be re-published here. 
 
 ## Acknowledgements
 
@@ -103,7 +81,6 @@ MIT License — see [LICENSE](LICENSE) for details.
 ## 功能特性
 
 - 🎵 **MPF 音乐包管理** — 导入、导出、替换游戏内的 MPF 音乐包
-- 🔊 **EALayer3 音频转换** — 内置 EALayer3 格式编解码，支持游戏音频与通用格式互转
 - 🎚️ **事件配置** — 管理音乐事件 (Event) 与曲目关联
 - 🌐 **中英双语** — 内置中英文翻译，可随时切换界面语言
 - 🖥️ **图形化界面** — 基于 Qt Widgets 的直观操作界面
@@ -133,7 +110,6 @@ OrangeNfsMusicEd-ONME/
     └── manifest.xml      # 应用程序清单
 ```
 
-## 编译说明
 
 ### 环境要求
 
@@ -141,31 +117,12 @@ OrangeNfsMusicEd-ONME/
 - MSVC 2022 或 MinGW
 - Python 3（EALayer3 转换脚本依赖）
 
-### 编译步骤
-
-```bash
-# 使用 qmake
-qmake MusicEd.pro
-nmake        # MSVC
-# 或
-make         # MinGW
-```
-
-> **注意**：`resources.qrc` 引用了 `tools/` 目录下的辅助工具（`MPFmaster.exe`、`sx.exe`、`ffmpeg.exe` 等）。这些工具属于第三方二进制文件，**未包含**在本仓库中。编译时请将所需工具放入 `tools/` 目录，或修改 `resources.qrc` 移除相关引用。
-
-### 中文路径问题
-
-MSVC 的资源编译器 (`rc.exe`) 不支持中文路径。如果项目路径含中文，可使用 `subst` 映射为英文盘符：
-
-```cmd
-subst X: "C:\path\to\project"
-```
 
 ## 关于本仓库
 
-本项目最初托管于 GitHub 组织 **CARBON-Plus-Team** 下。2026 年，该组织被误删除，由于账户未订阅付费支持服务，GitHub 官方无法协助恢复组织及其下的仓库。
+本项目最初托管于 GitHub 组织 **CARBON-Plus-Team** 下。2026 年，该组织被误删除。
 
-幸运的是，本地保留了完整的最新源码（最后修改于 2026 年 7 月），因此得以重新发布于此。本次重新上传仅包含具有学习价值的源代码，不含编译产物、第三方工具二进制及图标等资源文件。
+幸运的是，本地保留了完整的最新源码，因此得以重新发布于此。
 
 ## 致谢
 
